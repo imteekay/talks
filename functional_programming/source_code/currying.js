@@ -1,6 +1,6 @@
 let value;
 
-const add = (arg1, arg2) => (arg2) => arg1 + arg2;
+const add = arg1 => arg2 => arg1 + arg2;
 
 const increment = add(1); // => (arg2) => 1 + arg2
 value = increment(2); // 3
