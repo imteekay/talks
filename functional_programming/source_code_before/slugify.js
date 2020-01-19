@@ -1,6 +1,6 @@
 const string = " I will be a url slug   ";
 
-const slugify = (string) =>
+const slugify = string =>
   string
     .toLowerCase()
     .trim()
