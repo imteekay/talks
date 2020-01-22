@@ -1,12 +1,12 @@
-let PI = 3.14;
+let PI;
 
 const calculateArea = (radius) =>
   radius * radius * PI;
 
-let PI = 3.14;
+PI = 3.14;
 calculateArea(10); // 314.0
 
-let PI = 42;
+PI = 42;
 calculateArea(10); // 420
 
 // ------------------------------
