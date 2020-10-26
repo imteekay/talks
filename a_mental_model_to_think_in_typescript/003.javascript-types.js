@@ -1,3 +1,4 @@
+// JavaScript has types
 const product = {
   title: 'Some product',
   price: 100.00,
