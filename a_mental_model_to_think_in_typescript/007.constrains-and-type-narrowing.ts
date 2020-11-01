@@ -21,6 +21,8 @@ halfV2({ username: 'tk' }); // Argument of type '{ username: string; }' is not a
 halfV2([42, 3.14]); // Argument of type 'number[]' is not assignable to parameter of type 'number'.
 halfV2((a, b) => a + b); // Argument of type '(a: any, b: any) => any' is not assignable to parameter of type 'number'.
 
+// -----------------------------------------------------------------------
+
 // Narrowing using typeof
 type StringOrNumber = string | number;
 
@@ -39,6 +41,8 @@ function stringOrNumber(value: StringOrNumber) {
     value
   }
 }
+
+// -----------------------------------------------------------------------
 
 // ternary or if conditions as type narrowing
 type User = {
