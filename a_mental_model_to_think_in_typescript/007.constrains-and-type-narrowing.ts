@@ -1,25 +1,25 @@
-const half = (x) => x / 2;
+const halfV1 = (x) => x / 2;
 
-half(null); // 0
-half(undefined); // NaN
-half(0); // 0
-half('0'); // 0
-half('TK'); // NaN
-half({ username: 'tk' }); // NaN
-half([42, 3.14]); // NaN
-half((a, b) => a + b); // NaN
+halfV1(null); // 0
+halfV1(undefined); // NaN
+halfV1(0); // 0
+halfV1('0'); // 0
+halfV1('TK'); // NaN
+halfV1({ username: 'tk' }); // NaN
+halfV1([42, 3.14]); // NaN
+halfV1((a, b) => a + b); // NaN
 
 // Narrowing the input type
-const halfInTS = (x: number) => x / 2;
+const halfV2 = (x: number) => x / 2;
 
-halfInTS(null); // Argument of type 'null' is not assignable to parameter of type 'number'.
-halfInTS(undefined); // Argument of type 'undefined' is not assignable to parameter of type 'number'.(
-halfInTS(0); // 0
-halfInTS('0'); // Argument of type '"0"' is not assignable to parameter of type 'number'.
-halfInTS('TK'); // Argument of type '"TK"' is not assignable to parameter of type 'number'.
-halfInTS({ username: 'tk' }); // Argument of type '{ username: string; }' is not assignable to parameter of type 'number'.
-halfInTS([42, 3.14]); // Argument of type 'number[]' is not assignable to parameter of type 'number'.
-halfInTS((a, b) => a + b); // Argument of type '(a: any, b: any) => any' is not assignable to parameter of type 'number'.
+halfV2(null); // Argument of type 'null' is not assignable to parameter of type 'number'.
+halfV2(undefined); // Argument of type 'undefined' is not assignable to parameter of type 'number'.(
+halfV2(0); // 0
+halfV2('0'); // Argument of type '"0"' is not assignable to parameter of type 'number'.
+halfV2('TK'); // Argument of type '"TK"' is not assignable to parameter of type 'number'.
+halfV2({ username: 'tk' }); // Argument of type '{ username: string; }' is not assignable to parameter of type 'number'.
+halfV2([42, 3.14]); // Argument of type 'number[]' is not assignable to parameter of type 'number'.
+halfV2((a, b) => a + b); // Argument of type '(a: any, b: any) => any' is not assignable to parameter of type 'number'.
 
 // Narrowing using typeof
 type StringOrNumber = string | number;
