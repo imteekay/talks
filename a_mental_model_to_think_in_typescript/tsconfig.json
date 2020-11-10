@@ -9,5 +9,6 @@
     "sourceMap": true,
     "baseUrl": ".",
     "strictNullChecks": true,
+    "lib": ["es7"]
   },
 }
